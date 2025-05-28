@@ -1,0 +1,84 @@
+
+/* Base Styles */
+.design-approach {
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #c8a694;
+  padding: 80px 20px 40px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image "floating" above card */
+.design-image {
+  order: -1;
+  z-index: 2;
+  margin-bottom: -60px;
+  transition: transform 0.3s ease;
+}
+
+.design-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  border: 4px solid #1a1a1a;
+}
+
+/* Card Style Text Area */
+.design-text {
+  background: #1f1f1f;
+  padding: 100px 24px 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.design-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: #ffd8bd;
+}
+
+.design-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e6c6b0;
+}
+
+/* Tablet & Larger */
+@media (min-width: 768px) {
+  .design-approach {
+    flex-direction: row;
+    justify-content: center;
+    padding: 80px;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .design-image {
+    order: 0;
+    margin-bottom: 0;
+    margin-right: 40px;
+    align-self: center;
+  }
+
+  .design-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+  }
+
+  .design-text {
+    padding: 40px;
+    text-align: left;
+  }
+}
