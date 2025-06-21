@@ -111,7 +111,7 @@
             <label>Your Requirements *</label>
             <textarea name="requirements" rows="4" placeholder="Enter Your Requirements" required></textarea>
       
-            <button type="submit">Submit</button>
+            <button type="button" onclick="sendToWhatsApp()">Submit</button>
           </form>
       
           <!-- Embedded Google Map -->
@@ -209,6 +209,28 @@
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 </script>
+<script>
+function sendToWhatsApp() {
+  const name = document.querySelector('input[name="name"]').value;
+  const mobile = document.querySelector('input[name="mobile"]').value;
+  const city = document.querySelector('input[name="city"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const pincode = document.querySelector('input[name="pincode"]').value;
+  const size = document.querySelector('input[name="project_size"]').value;
+  const location = document.querySelector('input[name="project_location"]').value;
+  const budget = document.querySelector('input[name="budget"]').value;
+  const req = document.querySelector('textarea[name="requirements"]').value;
+
+  const message = `Hello, I would like to enquire:\n\n👤 Name: ${name}\n📞 Mobile: ${mobile}\n📍 City: ${city}\n✉️ Email: ${email}\n🏷️ Pincode: ${pincode}\n📐 Project Size: ${size}\n📌 Project Location: ${location}\n💰 Budget: ${budget}\n📝 Requirements: ${req}`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const phoneNumber = "918800544876"; // Your WhatsApp number with country code
+  const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  window.open(url, "_blank");
+}
+</script>
+
 
 
 
