@@ -2,7 +2,12 @@
   "redirects": [
     {
       "source": "/sitemap.xml",
-      "destination": "https://websitearchatelier.vercel.app/sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "https://www.thearchatelier.in",
       "permanent": true
     }
   ]
