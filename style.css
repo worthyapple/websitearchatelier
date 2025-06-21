@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px 40px;
     color: #fff;
     background-color: #000;
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black background */
     backdrop-filter: blur(10px); /* optional: for frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* for Safari */
     position: fixed;
