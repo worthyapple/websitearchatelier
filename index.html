@@ -194,8 +194,7 @@
       <div class="background">
         <div class="form-container">
           <h2>Get in touch</h2>
-          <form action="{% url 'index' %}" method="POST">
-    
+          <form id="whatsappForm">    
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" />
       
@@ -278,6 +277,22 @@
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 </script>
+<script>
+  document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent default form action
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    // 📝 Format WhatsApp message with emojis
+    const message = `👋 Hello! I'm interested in your services.%0A%0A👤 *Name:* ${name}%0A📞 *Phone:* ${phone}%0A📧 *Email:* ${email}`;
+
+    const whatsappNumber = "918800544876";
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+  });
+</script>
+
 
 </body>
 </html>
