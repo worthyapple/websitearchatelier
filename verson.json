@@ -1,14 +1,12 @@
-{
-  "redirects": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml",
-      "permanent": true
-    },
-    {
-      "source": "/",
-      "destination": "https://www.thearchatelier.in",
-      "permanent": true
-    }
-  ]
-}
+"redirects": [
+  {
+    "source": "http://thearchatelier.in/:path*",
+    "destination": "https://www.thearchatelier.in/:path*",
+    "permanent": true
+  },
+  {
+    "source": "https://thearchatelier.in/:path*",
+    "destination": "https://www.thearchatelier.in/:path*",
+    "permanent": true
+  }
+]
