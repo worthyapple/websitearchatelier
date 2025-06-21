@@ -1,12 +1,24 @@
-"redirects": [
-  {
-    "source": "http://thearchatelier.in/:path*",
-    "destination": "https://www.thearchatelier.in/:path*",
-    "permanent": true
-  },
-  {
-    "source": "https://thearchatelier.in/:path*",
-    "destination": "https://www.thearchatelier.in/:path*",
-    "permanent": true
-  }
-]
+{
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "http://www.thearchatelier.in/:path*",
+      "destination": "https://thearchatelier.in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "http://thearchatelier.in/:path*",
+      "destination": "https://thearchatelier.in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://www.thearchatelier.in/:path*",
+      "destination": "https://thearchatelier.in/:path*",
+      "permanent": true
+    }
+  ]
+}
