@@ -192,16 +192,24 @@
       </div>
       
 <script>
-    window.addEventListener('scroll', function () {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.style.setProperty('background-color', 'rgba(0, 0, 0, 0.9)', 'important');
-      } else {
-        navbar.style.setProperty('background-color', 'rgba(0, 0, 0, 0.5)', 'important');
-      }
-    });
+  let lastScrollTop = 0;
+  const navbar = document.getElementById('navbar');
 
+  window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scrolling down → hide navbar
+      navbar.style.transform = 'translateY(-100%)';
+    } else {
+      // Scrolling up → show navbar
+      navbar.style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
 </script>
+
 
 
 </body>
