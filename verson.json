@@ -1,8 +1,8 @@
 {
   "redirects": [
     {
-      "source": "/lander",
-      "destination": "/",
+      "source": "/sitemap.xml",
+      "destination": "https://websitearchatelier.vercel.app/sitemap.xml",
       "permanent": true
     }
   ]
