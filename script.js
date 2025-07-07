@@ -1,12 +1,5 @@
 
-// Navbar scroll opacity functionality
-const navbar = document.querySelector('.navbar1');
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-    const maxScroll = 300;
-    const opacity = Math.max(1 - scrollPosition / maxScroll, 0);
-    navbar.style.opacity = opacity;
-});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const firstThumb = document.querySelector('#thumbnailGallery img');
@@ -76,16 +69,3 @@ function toggleSidebar() {
     sidebar.classList.toggle('show');
 }
 
-let lastScrollY = window.scrollY; // Track the last scroll position
-const navbarElement = document.getElementById('navbar'); // Get the navbar element
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > lastScrollY) {
-        // Scrolling down - hide the navbar
-        navbarElement.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up - show the navbar
-        navbarElement.style.transform = 'translateY(0)';
-    }
-    lastScrollY = window.scrollY; // Update the last scroll position
-});
