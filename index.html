@@ -73,6 +73,12 @@
 
 </head>
 <body>
+
+    <!-- Image Container Snippet -->
+<div class="image-container">
+    <img src="image.png.jpg" alt="Sample Image">
+    <button class="close-button" onclick="closeImage()">X</button>
+</div>
   <div class="contact-sidebar">
     <div class="icon-box arrow-box">
       <img src="https://img.icons8.com/ios-filled/50/ffffff/right--v1.png" alt="arrow" />
@@ -337,6 +343,12 @@
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
+</script>
+<script>
+    // Close Image Function
+    function closeImage() {
+        document.querySelector('.image-container').style.display = 'none';
+    }
 </script>
 <script>
   document.getElementById('whatsappForm').addEventListener('submit', function(e) {
